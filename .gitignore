@@ -1,0 +1,10 @@
+/Source/.vs
+/Source/AlarmShell/bin
+/Source/AlarmShell/obj
+/Source/AlarmShell.Console/bin
+/Source/AlarmShell.Console/obj
+/Source/TestResults
+/Source/Tests/AlarmShell.Console.UnitTests/bin
+/Source/Tests/AlarmShell.Console.UnitTests/obj
+/Source/Tests/AlarmShell.UnitTests/bin
+/Source/Tests/AlarmShell.UnitTests/obj
