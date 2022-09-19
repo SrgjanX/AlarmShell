@@ -5,13 +5,15 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlarmShell.Console", "AlarmShell.Console\AlarmShell.Console.csproj", "{C5082944-B8C3-4592-8D67-A73F7A20D3DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlarmShell", "AlarmShell\AlarmShell.csproj", "{84480EA1-3D9E-4B81-9E15-1C5584BBE858}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlarmShell", "AlarmShell\AlarmShell.csproj", "{84480EA1-3D9E-4B81-9E15-1C5584BBE858}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4E2E4131-439D-4577-A5CD-723D1622607F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlarmShell.UnitTests", "Tests\AlarmShell.UnitTests\AlarmShell.UnitTests.csproj", "{C650B95D-15C6-48E2-A9A5-FAC83BF2D658}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlarmShell.UnitTests", "Tests\AlarmShell.UnitTests\AlarmShell.UnitTests.csproj", "{C650B95D-15C6-48E2-A9A5-FAC83BF2D658}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlarmShell.Console.UnitTests", "Tests\AlarmShell.Console.UnitTests\AlarmShell.Console.UnitTests.csproj", "{EC85855F-E52D-401C-913A-8586CFD64F14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlarmShell.Console.UnitTests", "Tests\AlarmShell.Console.UnitTests\AlarmShell.Console.UnitTests.csproj", "{EC85855F-E52D-401C-913A-8586CFD64F14}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlarmShell.GUI", "AlarmShell.GUI\AlarmShell.GUI.csproj", "{5F08B380-3113-41D0-940A-F79D454AD7BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{EC85855F-E52D-401C-913A-8586CFD64F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC85855F-E52D-401C-913A-8586CFD64F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC85855F-E52D-401C-913A-8586CFD64F14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F08B380-3113-41D0-940A-F79D454AD7BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F08B380-3113-41D0-940A-F79D454AD7BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F08B380-3113-41D0-940A-F79D454AD7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F08B380-3113-41D0-940A-F79D454AD7BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

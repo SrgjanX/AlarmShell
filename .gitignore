@@ -8,3 +8,6 @@
 /Source/Tests/AlarmShell.Console.UnitTests/obj
 /Source/Tests/AlarmShell.UnitTests/bin
 /Source/Tests/AlarmShell.UnitTests/obj
+/Source/AlarmShell.GUI/bin
+/Source/AlarmShell.GUI/obj
+*.user
