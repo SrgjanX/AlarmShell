@@ -19,7 +19,7 @@ namespace AlarmShell.Console
 
         public AlarmInfo GetAlarmInfo()
         {
-            string name = null;
+            string? name = null;
             int h = 0, m = 0, s = 0;
             if (Args?.Any() == true)
             {
