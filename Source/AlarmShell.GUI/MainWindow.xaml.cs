@@ -1,12 +1,15 @@
-﻿using System.Windows;
+﻿//srgjanx
+
+using System.Windows;
 
 namespace AlarmShell.GUI
 {
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(string[] args)
         {
             InitializeComponent();
+
         }
     }
 }

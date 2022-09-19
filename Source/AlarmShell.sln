@@ -15,6 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlarmShell.Console.UnitTest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlarmShell.GUI", "AlarmShell.GUI\AlarmShell.GUI.csproj", "{5F08B380-3113-41D0-940A-F79D454AD7BA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Batch Scripts", "Batch Scripts", "{5958C09D-2A4B-49AC-913A-B05A69E2238E}"
+	ProjectSection(SolutionItems) = preProject
+		Batch Scripts\alarm.bat = Batch Scripts\alarm.bat
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
