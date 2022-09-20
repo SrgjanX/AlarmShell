@@ -1,6 +1,6 @@
 //srgjanx
 
-namespace AlarmShell.Console.UnitTests
+namespace AlarmShell.UnitTests
 {
     [TestClass]
     public class ArgumentsProcessorTests

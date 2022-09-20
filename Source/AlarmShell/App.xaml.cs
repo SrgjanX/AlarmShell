@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace AlarmShell.GUI
+namespace AlarmShell
 {
     public partial class App : Application
     {

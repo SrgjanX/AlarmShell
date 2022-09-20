@@ -1,4 +1,8 @@
-﻿namespace AlarmShell
+﻿//srgjanx
+
+using System;
+
+namespace AlarmShell
 {
     public class AlarmInfo
     {

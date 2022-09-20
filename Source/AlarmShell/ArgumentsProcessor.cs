@@ -1,8 +1,10 @@
 ﻿//srgjanx
 
+using System;
+using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace AlarmShell.Console
+namespace AlarmShell
 {
     public class ArgumentsProcessor
     {
