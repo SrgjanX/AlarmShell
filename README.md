@@ -13,11 +13,11 @@ The point of this application is to set alarm by using the command prompt or if 
 setting up quick alarm can but as fast as CTRL+R and typing <b>alarm "pizza time" 20m</b>.
 
 ## Why?
-I fixed my own problem when I'm doing something and in meantime someone calls me and tell me to another thing, how I solved that problem?<br/>
+I fixed my own problem when I'm doing something and in meantime someone calls me and tells me to do another thing, how I solved that problem?<br/>
 CTRL+R notepad and type the thing and 70% of the time I'll forgot because I'm in the middle of working on something.
 
 ## Features
-- Quick alarm set by typing one command.
+- Quick alarm set by typing one command
 - Snooze command
 
 ## Usage example
@@ -29,8 +29,8 @@ Write these commands in cmd or Windows Run:
 - alarm "call someone" 30m
 
 ## How to install
-- Copy the batch script <b>alarm.bat</b> to <b>%windir%\system32</b>.
-- Copy the output folder to <b>C:\ProgramData\AlarmShell</b>.
+- Copy the batch script <b>alarm.bat</b> to <b>%windir%\system32</b>
+- Copy the output folder to <b>C:\ProgramData\AlarmShell</b>
 
 ## Virus notification
 My anti virus sure was popping up while I was developing this, <br/>
