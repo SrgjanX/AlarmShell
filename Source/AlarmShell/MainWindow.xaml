@@ -9,5 +9,7 @@
         WindowStartupLocation="CenterScreen"
         Icon="/Resources/icon.ico"
         ShowInTaskbar="False">
-    <Grid/>
+    <Grid>
+        <Button IsEnabled="False" Name="btnSnooze" Content="Snooze" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="60" Click="btnSnooze_Click"/>
+    </Grid>
 </Window>

@@ -76,6 +76,7 @@ namespace AlarmShell
             {
                 Application.Current.Dispatcher.Invoke(() =>
                 {
+                    btnSnooze.IsEnabled = true;
                     ActivateWindow();
                     Title = alarmInfo?.Name ?? "";
                     nIcon.ShowBalloonTip(5000, "Alarm Shell", alarmInfo?.Name ?? "", Forms.ToolTipIcon.Info);
@@ -87,5 +88,16 @@ namespace AlarmShell
                 MessageBox.Show($"Error: {ex.Message}", "Alarm Shell", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void btnSnooze_Click(object sender, RoutedEventArgs e)
+        {
+            if(timer != null)
+            {
+                timer.Interval = TimeSpan.FromMinutes(5).TotalMilliseconds;
+                timer.Start();
+                WindowState = WindowState.Minimized;
+                btnSnooze.IsEnabled = false;
+            }
+        }
     }
-}
+}   
