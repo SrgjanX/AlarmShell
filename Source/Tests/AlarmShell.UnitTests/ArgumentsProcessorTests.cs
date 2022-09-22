@@ -150,5 +150,47 @@ namespace AlarmShell.UnitTests
             Assert.AreEqual("Unnamed Alarm", alarmInfo.Name);
             Assert.AreEqual((1 * 60 * 60) + (30 * 60) + 45, alarmInfo.TimeSpan.TotalSeconds);
         }
+
+        [TestMethod]
+        public void GetAlarmInfo_ActualTimeAm()
+        {
+            string[] args = new string[]
+            {
+                "11:30"
+            };
+            ArgumentsProcessor argumentsProcessor = new ArgumentsProcessor(args);
+            AlarmInfo alarmInfo = argumentsProcessor.GetAlarmInfo();
+            Assert.AreEqual("Unnamed Alarm", alarmInfo.Name);
+            Assert.AreEqual(11, alarmInfo.TimeSpan.Hours);
+            Assert.AreEqual(30, alarmInfo.TimeSpan.Minutes);
+        }
+
+        [TestMethod]
+        public void GetAlarmInfo_ActualTimePm()
+        {
+            string[] args = new string[]
+            {
+                "14:00"
+            };
+            ArgumentsProcessor argumentsProcessor = new ArgumentsProcessor(args);
+            AlarmInfo alarmInfo = argumentsProcessor.GetAlarmInfo();
+            Assert.AreEqual("Unnamed Alarm", alarmInfo.Name);
+            Assert.AreEqual(14, alarmInfo.TimeSpan.Hours);
+            Assert.AreEqual(0, alarmInfo.TimeSpan.Minutes);
+        }
+
+        [TestMethod]
+        public void GetAlarmInfo_TooLongHours()
+        {
+            string[] args = new string[]
+            {
+                "144:00"
+            };
+            ArgumentsProcessor argumentsProcessor = new ArgumentsProcessor(args);
+            AlarmInfo alarmInfo = argumentsProcessor.GetAlarmInfo();
+            Assert.AreEqual("Unnamed Alarm", alarmInfo.Name);
+            Assert.AreEqual(144, alarmInfo.TimeSpan.Hours);
+            Assert.AreEqual(0, alarmInfo.TimeSpan.Minutes);
+        }
     }
 }
