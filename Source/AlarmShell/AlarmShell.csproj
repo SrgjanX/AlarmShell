@@ -6,6 +6,10 @@
     <UseWPF>true</UseWPF>
     <UseWindowsForms>True</UseWindowsForms>
     <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+    <Authors>Srgjan Ristovski</Authors>
+    <Description>Quickest alarm set ever :) (for Windows)</Description>
+    <RepositoryUrl>https://github.com/SrgjanX/AlarmShell</RepositoryUrl>
+    <Copyright>Copyright (c) Srgjan Ristovski</Copyright>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Resources\icon.ico">
