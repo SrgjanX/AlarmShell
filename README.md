@@ -18,7 +18,7 @@ CTRL+R notepad and type the thing and 70% of the time I'll forgot because I'm in
 
 ## Features
 - Quick alarm set by typing one command
-- Snooze command
+- Snooze command (snooze extends the time for 5 minutes)
 
 ## Usage example
 Write these commands in cmd or Windows Run:
