@@ -13,6 +13,7 @@ namespace AlarmShell
         private AlarmInfo? alarmInfo;
         private Timer timer;
         private Forms.NotifyIcon nIcon;
+        private int snoozeMins = 5;
 
         public MainWindow(string[] args)
         {
@@ -21,8 +22,10 @@ namespace AlarmShell
                 InitializeComponent();
                 ArgumentsProcessor argumentsProcessor = new ArgumentsProcessor(args);
                 alarmInfo = argumentsProcessor.GetAlarmInfo();
+                Title = alarmInfo?.Name ?? "";
                 SetupAlarm(alarmInfo);
                 SetupNotification();
+                lblAlarmActiveTime.Content = DateTime.Now.Add(alarmInfo.TimeSpan).ToShortTimeString();
             }
             catch (Exception ex)
             {
@@ -62,6 +65,7 @@ namespace AlarmShell
         {
             WindowState = WindowState.Normal;
             Activate();
+            Show();
         }
 
         private void NIcon_Click(object? sender, EventArgs e)
@@ -78,7 +82,6 @@ namespace AlarmShell
                 {
                     btnSnooze.IsEnabled = true;
                     ActivateWindow();
-                    Title = alarmInfo?.Name ?? "";
                     nIcon.ShowBalloonTip(5000, "Alarm Shell", alarmInfo?.Name ?? "", Forms.ToolTipIcon.Info);
                     System.Media.SystemSounds.Asterisk.Play();
                 });
@@ -93,8 +96,9 @@ namespace AlarmShell
         {
             if(timer != null)
             {
-                timer.Interval = TimeSpan.FromMinutes(5).TotalMilliseconds;
+                timer.Interval = TimeSpan.FromMinutes(snoozeMins).TotalMilliseconds;
                 timer.Start();
+                lblAlarmActiveTime.Content = DateTime.Now.AddMinutes(snoozeMins).ToShortTimeString();
                 WindowState = WindowState.Minimized;
                 btnSnooze.IsEnabled = false;
             }

@@ -4,12 +4,27 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Alarm" Height="300" Width="600" 
+        Title="Alarm" 
+        MinWidth="350" MinHeight="180" 
+        Width="600" Height="300" 
         WindowState="Minimized"
         WindowStartupLocation="CenterScreen"
         Icon="/Resources/icon.ico"
+        WindowStyle="ToolWindow"
         ShowInTaskbar="False">
     <Grid>
-        <Button IsEnabled="False" Name="btnSnooze" Content="Snooze" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="60" Click="btnSnooze_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="90"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Label Content="Alarm will be activated at: " FontWeight="Bold" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+        <Label Name="lblAlarmActiveTime" Content="00:00:00" Margin="10,10,10,10" FontWeight="Bold" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="40"/>
+        <Button IsEnabled="False" Name="btnSnooze" Content="Snooze" Margin="5,10,5,10" Click="btnSnooze_Click" Grid.Row="2" Grid.Column="2"/>
     </Grid>
 </Window>
