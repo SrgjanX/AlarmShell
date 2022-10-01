@@ -26,12 +26,18 @@ namespace AlarmShell
                 SetupAlarm(alarmInfo);
                 SetupNotification();
                 lblAlarmActiveTime.Content = DateTime.Now.Add(alarmInfo.TimeSpan).ToShortTimeString();
+                Deactivated += MainWindow_Deactivated;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error: {ex.Message}", "Alarm Shell", MessageBoxButton.OK, MessageBoxImage.Error);
                 Application.Current.Shutdown();
             }
+        }
+
+        private void MainWindow_Deactivated(object? sender, EventArgs e)
+        {
+            Hide();
         }
 
         ~MainWindow()
@@ -99,7 +105,8 @@ namespace AlarmShell
                 timer.Interval = TimeSpan.FromMinutes(snoozeMins).TotalMilliseconds;
                 timer.Start();
                 lblAlarmActiveTime.Content = DateTime.Now.AddMinutes(snoozeMins).ToShortTimeString();
-                WindowState = WindowState.Minimized;
+                //WindowState = WindowState.Minimized;
+                Hide();
                 btnSnooze.IsEnabled = false;
             }
         }
